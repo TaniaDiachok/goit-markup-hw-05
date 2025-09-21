@@ -791,14 +791,14 @@ img {
 
 .modal-check-box {
     display: inline-flex;
+        align-items: center;
+        justify-content: center;
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     background-color: transparent;
     margin-right: 8px;
-    align-items: center;
-    justify-content: center;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -806,6 +806,7 @@ img {
 .privacy-link {
     color: #4d5ae5;
 }
+
 .modal-btn {
     font-family: inherit;
     font-weight: 500;
