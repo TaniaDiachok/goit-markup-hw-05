@@ -545,6 +545,11 @@ img {
 
 
 .sub-input {
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    padding-left: 16px;
     background-color: transparent;
     outline: none;
     border: 1px solid #ffffff;
@@ -559,8 +564,7 @@ img {
         font-size: 12px;
         line-height: 2;
         letter-spacing: 0.04em;
-        color: #ffffff;
-        padding-left: 16px;
+        
 }
 
 .sub-btn {
@@ -570,7 +574,7 @@ img {
     gap: 16px;
     border-radius: 4px;
         padding: 8px 24px;
-        width: 165px;
+        min-width: 165px;
         height: 40px;
         background-color: #4d5ae5;
         color: #ffffff;
@@ -585,6 +589,7 @@ img {
 
 .send-icon {
     fill: #ffffff;
+    margin-left: 16px;
 }
 /* ---------MODAL---------- */
 
@@ -599,6 +604,7 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -618,6 +624,7 @@ img {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 72px 24px 24px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -625,7 +632,9 @@ img {
     top: 24px;
     right: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 100%;
+    border-radius: 50%;
+    background-color: #e7e9fc;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: #e7e9fc;
     width: 24px;
     height: 24px;
@@ -634,8 +643,20 @@ img {
     align-items: center;
 }
 
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
 .modal-close-icon {
     fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+    fill: #ffffff;
 }
 
 .modal-title {
@@ -650,6 +671,8 @@ img {
 
 }
 
+
+
 .modal-input {
     width: 100%;
     height: 40px;
@@ -659,7 +682,7 @@ img {
     padding-left: 38px;
     padding-right: 16px;
     outline: transparent;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon {
@@ -668,7 +691,7 @@ img {
     top: 50%;
     transform: translateY(-50%);
     left: 16px;
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -680,18 +703,23 @@ img {
 }
 
 .modal-textarea {
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     width: 100%;
         height: 40px;
         border: 1px solid rgba(46, 47, 66, 0.4);
         border-radius: 4px;
         background-color: transparent;
     height: 120px;
-    padding-left: 16px;
-    padding-top: 8px;
     resize: none;
     outline: transparent;
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        font-size: 12px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);        font-size: 12px;
+        padding: 8px 16px;
+}
+
+.modal-textarea:focus {
+    border-color: #4D5AE5;
 }
 
 .modal-textarea::placeholder {
@@ -705,7 +733,7 @@ img {
 }
 
 .modal-label-input {
-    display: inline-block;
+    display: block;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -718,8 +746,17 @@ img {
     margin-bottom: 8px;
 }
 
+.comment-field {
+    margin-bottom: 16px;
+}
+
 .input-wrapper {
     position: relative;
+    margin-bottom: 16px;
+}
+
+.modal-checkbox {
+    margin-bottom: 24px;
 }
 
 .modal-check:checked + .modal-label-checkbox > .modal-check-box {
@@ -746,7 +783,7 @@ img {
 }
 
 .modal-check-box {
-    display: inline-block;
+    display: inline-flex;
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -757,9 +794,12 @@ img {
     align-items: center;
     justify-content: center;
     fill: transparent;
-    transition: 230ms cubic-bezier(0.4, 0, 0.2, 1) fill;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.privacy-link {
+    color: #4d5ae5;
+}
 .modal-btn {
     font-family: inherit;
     font-weight: 500;
